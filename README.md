@@ -34,8 +34,9 @@ chown -R hazelcast:hazelcast /opt/hazelcast
 rsync -r etc/ /etc
 
 # Start and enable service
-systemctl start hazelcast.service
+systemctl daemon-reload
 systemctl enable hazelcast.service
+systemctl start hazelcast.service
 ```
 
 Check if the Hazelcast is running by calling REST URL:
