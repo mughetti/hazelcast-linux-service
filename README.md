@@ -10,7 +10,7 @@ Install the Hazelcast as a Linux (systemd) service.
 
 Clone this repo
 ```bash
-git clone https://github.com/kwart/hazelcast-linux-service.git
+git clone https://github.com/oifayulian/hazelcast-linux-service.git
 ```
 
 Run following commands as the `root` (`sudo su`)
@@ -23,7 +23,7 @@ groupadd -r hazelcast
 useradd -r -g hazelcast -d /opt/hazelcast -s /sbin/nologin hazelcast
 
 # Install Hazelcast
-HAZELCAST_VERSION=4.2.5
+HAZELCAST_VERSION=5.3.2
 wget https://github.com/hazelcast/hazelcast/releases/download/v$HAZELCAST_VERSION/hazelcast-$HAZELCAST_VERSION.zip
 unzip hazelcast-$HAZELCAST_VERSION.zip -d /opt
 ln -s /opt/hazelcast-$HAZELCAST_VERSION /opt/hazelcast
