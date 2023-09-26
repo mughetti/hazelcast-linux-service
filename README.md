@@ -27,9 +27,8 @@ HAZELCAST_VERSION=5.3.2
 wget https://github.com/hazelcast/hazelcast/releases/download/v$HAZELCAST_VERSION/hazelcast-$HAZELCAST_VERSION.zip
 unzip hazelcast-$HAZELCAST_VERSION.zip -d ./hazelcast-release
 mv ./hazelcast-release/hazelcast-$HAZELCAST_VERSION /opt/hazelcast
-ln -s /opt/hazelcast-$HAZELCAST_VERSION /opt/hazelcast
-# Change owner of the Hazelcast directories and links
-chown -R hazelcast:hazelcast /opt/hazelcast /opt/hazelcast-$HAZELCAST_VERSION
+# Change owner of the Hazelcast directories
+chown -R hazelcast:hazelcast /opt/hazelcast
 
 # Copy service and config files
 rsync -r etc/ /etc
